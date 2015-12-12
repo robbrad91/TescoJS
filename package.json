@@ -1,0 +1,28 @@
+{
+  "name": "TescoJS",
+  "version": "0.0.1",
+  "description": "NodeJS wrapper for the Tesco Labs API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bradders591/TescoJS.git"
+  },
+  "keywords": [
+    "tesco",
+    "api",
+    "js"
+  ],
+  "author": "Rob <rob@austellapp.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bradders591/TescoJS/issues"
+  },
+  "homepage": "https://github.com/Bradders591/TescoJS",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
