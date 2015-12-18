@@ -107,6 +107,12 @@ module.exports = {
             if(data.StatusCode == '150') {
                 return cb(new Error(invalidSessionKey), null);
             }
+            if(data.StatusCode == '115') {
+                return cb(new Error(invalidSessionKey), null);
+            }
+            if(data.StatusCode == '120') {
+                return cb(new Error(invalidSessionKey), null);
+            }
         });
         res.on('error', function (error) {
             // handle error
@@ -115,4 +121,3 @@ module.exports = {
     });
   }
   
-}
