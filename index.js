@@ -13,7 +13,7 @@ module.exports = {
     var invalidLoginDetails = 'Incorrect format for login details passed';
     var invalidLoginError = 'Invalid login details';
     
-    var unknownError = 'Unknown reponse from API'
+    var unknownError = 'Unknown reponse from API';
 
     // replace defaults with passed in options
     for (var key in loginDetails) {

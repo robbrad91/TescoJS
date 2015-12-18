@@ -1,5 +1,5 @@
 {
-  "name": "TescoJS",
+  "name": "tescojs",
   "version": "0.0.1",
   "description": "NodeJS wrapper for the Tesco Labs API",
   "main": "index.js",
