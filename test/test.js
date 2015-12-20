@@ -9,7 +9,7 @@ describe('Login', function() {
 			"devKey": "AAABBBCCCDDDD",
 		}
 		tescojs.login(loginDetails, function(err, data){
-			expect(err).exist
+			expect(err).exist;
 		});
 	});
 });
@@ -20,8 +20,18 @@ describe('Search', function() {
 			"product": '5000237112236',
 			"pageNumber": '1'
 		}
-		tescojs.search(options, function(err, data){
-			expect(err).exist
+		tescojs.search(options, function(error, data){
+			expect(error).exist;
+		});
+	});
+	it('Invalid session key should return error', function() {
+  		var options2 = {
+			"product": '5000237112236',
+			"pageNumber": '1',
+			"sessionKey": '9999999999'
+		}
+		tescojs.search(options2, function(err, data){
+			expect(err).exist;
 		});
 	});
 });

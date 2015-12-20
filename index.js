@@ -68,7 +68,7 @@ module.exports = {
         "page": "1"
     }
     var invalidOptions = 'Invalid options passed';
-    var invalidSessionKey = 'Invalid session key';
+    var invalidSessionKey = 'Invalid session or API key';
     var unknownError = 'Unknown reponse from API';
 
     // replace defaults with passed in options
@@ -99,18 +99,12 @@ module.exports = {
         });
         res.on('end', function () {
             var data = JSON.parse(responseData);
-            //console.log('success: ' + JSON.stringify(data));    
-            if(data.StatusCode == 0) {
+            var sd = data.StatusCode;
+            if(sd == 0) {
                 //success
                 return cb(null, data.Products); 
             }
-            if(data.StatusCode == '150') {
-                return cb(new Error(invalidSessionKey), null);
-            }
-            if(data.StatusCode == '115') {
-                return cb(new Error(invalidSessionKey), null);
-            }
-            if(data.StatusCode == '120') {
+            if(sd == '150' || sd == '115' || sd == '120') {
                 return cb(new Error(invalidSessionKey), null);
             }
         });
