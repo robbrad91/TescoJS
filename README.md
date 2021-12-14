@@ -13,23 +13,21 @@ npm install tescojs
 ## Require Library
 
 ```javascript
-var tescojs = require('tescojs');
+var tescojs = require("tescojs");
 ```
 
 ## Login
 
 ```javascript
-
 var loginDetails = {
-	"email": "test@test.com",
-	"password": "password",
-	"appKey": "key",
-	"devKey": "key",
-}
-tescojs.login(loginDetails, function(err, sessionKey){
-	//returns a session key for all future functions
+  email: "test@test.com",
+  password: "password",
+  appKey: "key",
+  devKey: "key",
+};
+tescojs.login(loginDetails, function (err, sessionKey) {
+  //returns a session key for all future functions
 });
-
 ```
 
 ## Product Search
@@ -46,3 +44,5 @@ tescojs.search(options, function(err, data){
 	//returns an array of products
 });
 ```
+
+Developers will go to any lengths for a free t-shirt! [Twilio Quest](https://www.twilio.com/quest)
